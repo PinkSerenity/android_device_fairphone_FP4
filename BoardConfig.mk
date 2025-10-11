@@ -86,7 +86,7 @@ BOARD_KERNEL_CMDLINE := \
 BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_CLANG_VERSION := r530567
-TARGET_KERNEL_CONFIG := vendor/lito-perf_defconfig vendor/debugfs.config vendor/fairphone/FP4.config
+TARGET_KERNEL_CONFIG := vendor/lito-perf_defconfig vendor/fairphone/FP4.config
 TARGET_KERNEL_SOURCE := kernel/fairphone/sm7225
 
 # Kernel modules - Audio
@@ -124,9 +124,6 @@ TARGET_MODULE_ALIASES += \
 # Kernel modules - WLAN
 TARGET_MODULE_ALIASES += \
     wlan.ko:qca_cld3_wlan.ko
-
-# Media
-TARGET_USES_ION := true
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
@@ -173,7 +170,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
-BOOT_SECURITY_PATCH := 2025-06-05
+BOOT_SECURITY_PATCH := 2025-09-05
 VENDOR_SECURITY_PATCH := $(BOOT_SECURITY_PATCH)
 
 # SEPolicy
@@ -182,7 +179,7 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # Verified Boot
-STOCK_SECURITY_PATCH := 2025-06-05 # Latest stock update available
+STOCK_SECURITY_PATCH := 2025-09-05 # Latest stock update available
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 BOARD_AVB_VBMETA_SYSTEM := system system_ext product
